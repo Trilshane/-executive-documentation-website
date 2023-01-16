@@ -1,0 +1,508 @@
+@font-face {
+  font-family: "Whitney";
+  src: url(../fonts/ofont.ru_Whitney\ SSm\ Book.ttf);
+}
+body {
+  font-family: "Whitney";
+  box-sizing: content-box;
+  margin: 0;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 30px;
+  align-items: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.logo img {
+  height: 60px;
+  width: 100px;
+}
+.menu {
+  width: 70%;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.menu ul li {
+  list-style-type: none;
+  margin-right: 10px;
+  text-align: center;
+}
+.menu ul li a:hover {
+  color: gold;
+}
+.dropDownList {
+  position: relative;
+  cursor: pointer;
+}
+.dropDownList:hover {
+  color: gold;
+}
+.dropDownList::after {
+  content: "\25BC";
+  position: absolute;
+}
+.dropDownListActive {
+  color: gold;
+}
+.dropDownListActive::after {
+  transform: rotate(180deg);
+}
+.subMenu {
+  display: flex;
+  position: absolute;
+  transform: translateX(-40%);
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.subMenuContent a {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subMenuContent img {
+  max-width: 50px;
+  padding: 20px;
+}
+.subMenuContent span {
+  font-size: 0.8rem;
+}
+.firstSection {
+  margin: 0;
+  height: 100vh;
+}
+.firsSectionMedia {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.firstsectionVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-51%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.firstSectionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.firstSectionContent h1 {
+  font-size: 3em;
+  letter-spacing: 10px;
+}
+.openModal {
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  letter-spacing: 5px;
+}
+.openModal:hover {
+  color: gold;
+  border: 1px solid gold;
+}
+.aboutMeFirstPage {
+  height: 200vh;
+  position: relative;
+}
+.aboutMeFirstPage img {
+  max-width: 1000px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+  transition: 1s ease;
+}
+.aboutMeFirstPage img:hover {
+  opacity: 1;
+}
+.aboutMeFirstPage p {
+  position: absolute;
+  top: 85%;
+  left: 7%;
+  font-size: 1.8em;
+  width: 60%;
+  line-height: 40px;
+}
+.secondSectionServices {
+  margin-top: 90px;
+}
+.titleServices {
+  max-width: 1200px;
+}
+.servicesBlocks {
+  display: flex;
+  justify-content: space-around;
+}
+.servicesBlocks a {
+  position: relative;
+}
+.servicesBlocks a img {
+  max-width: 600px;
+  opacity: 0.3;
+  transition: 1s ease;
+}
+.servicesBlocks a span {
+  position: absolute;
+  left: 5%;
+  top: 90%;
+  font-size: 1.5em;
+}
+.servicesBlocks a img:hover {
+  opacity: 1;
+  border: 1px solid gold;
+}
+.servicesBlocks a:hover span {
+  color: gold;
+}
+.thirdSectionTagline {
+  height: 120vh;
+  position: relative;
+}
+.tagline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  text-align: center;
+  letter-spacing: 10px;
+}
+/*Секция услуги*/
+.workExamples {
+  position: relative;
+}
+.workExamples h1 {
+  font-size: 8em;
+  margin-top: 150px;
+  text-align: center;
+  letter-spacing: 40px;
+  font-weight: 400;
+}
+.sliders {
+  display: flex;
+  justify-content: space-around;
+}
+.slider {
+  width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+.slider p {
+  text-align: center;
+}
+.sliderBTN {
+  position: absolute;
+  background: none;
+  color: white;
+  font-size: 3em;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  z-index: 1;
+}
+.next {
+  left: 100%;
+  transform: translateX(-100%);
+}
+.sliderBTN:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: gold;
+}
+.slider-line {
+  width: 1800px;
+  position: relative;
+  transition: all ease 1s;
+}
+.slider-line img {
+  max-width: 600px;
+  max-height: 900px;
+}
+
+/*Футер*/
+footer {
+  font-size: 1em;
+  padding: 30px;
+}
+.footSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footlogo div {
+  margin: 25px;
+}
+.footLinks {
+  display: flex;
+  flex-direction: column;
+}
+.footLinks a {
+  margin: 15px;
+}
+.footLinks a:hover {
+  color: gold;
+}
+.footerActive {
+  color: gold;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.formContainer {
+  position: relative;
+  padding: 30px 30px 90px;
+  top: 50%;
+  background-color: black;
+  transform: translateY(-50%);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.formContainer h1 {
+  font-size: 2em;
+}
+.formContainer p {
+  font-size: 0.8em;
+}
+.formReq {
+  color: gold;
+}
+.formClose {
+  font-size: 40px;
+  position: absolute;
+  left: 92%;
+  top: 3%;
+  cursor: pointer;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formTxt {
+  width: 250px;
+  height: 30px;
+  margin-top: 10px;
+  font-family: "Whitney";
+}
+.rowMessge {
+  display: flex;
+  align-items: flex-start;
+}
+.labelMessage {
+  margin-top: 10px;
+}
+.formMessage {
+  height: 100px;
+}
+.submitBtn {
+  padding: 10px;
+  color: gold;
+  background-color: black;
+  border: 1px solid gold;
+  font-family: "Whitney";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+
+.titleHead {
+  margin: 150px auto;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 9em;
+}
+
+.questionTabs {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.questionTabsNav {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.questionTabsBTN {
+  background-color: black;
+  font-size: 1.6em;
+  color: grey;
+  font-family: "Whitney";
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 1s ease;
+}
+.questionTabsBTN:hover {
+  color: gold;
+}
+.questionTabsBTNActive {
+  color: white;
+}
+.questionTabsBTNActive:hover {
+  color: white;
+}
+
+.questionTabsPane {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.accordeon {
+  position: relative;
+  margin-bottom: 30px;
+}
+.accordeonHead {
+  font-size: 2.1em;
+  padding: 30px;
+  cursor: pointer;
+  color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordeonHead::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  transition: 0.5s;
+  font-size: 4rem;
+}
+.accordeonHead__active::after {
+  transform: rotate(45deg);
+}
+.accordeonHead:hover {
+  color: gold;
+}
+.accordeonHead__active {
+  color: gold;
+}
+.accordeonContent {
+  position: relative;
+  font-size: 1.5em;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.5s;
+}
+.accordeonContent p a {
+  color: gold;
+}
+.accordeonContent p span {
+  color: gold;
+  font-weight: bold;
+}
+
+/*Секция услуг*/
+.servicesSection {
+  position: relative;
+}
+.servicesSectionText {
+  position: relative;
+  font-size: 2em;
+  color: grey;
+  width: 1200px;
+  left: 20%;
+  transform: translateX(-20%);
+  margin-bottom: 150px;
+}
+.servicesQestionList {
+  list-style: none;
+  padding: 0;
+}
+.servicesQestionListContent {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+.servicesQestionListHead {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+.servicesQestionListHead div {
+  position: absolute;
+  color: gold;
+  font-size: 2em;
+  left: -10%;
+}
+.servicesQestionListHead h1 {
+  font-size: 6.5em;
+  margin: 0;
+}
+.servicesQestionListTextContent {
+  color: grey;
+  font-size: 2em;
+  width: 1000px;
+}
+.servicesQestionListTextContent a {
+  color: gold;
+}
+.servicesQestionListTextContentList {
+  list-style-type: disc;
+  font-size: 1.2em;
+  width: 1000px;
+}
+.servicesQestionListTextContentList li::marker {
+  color: gold;
+}
+.servicesQestionList li img {
+  width: 100%;
+  margin: 0;
+  opacity: 0.3;
+  transition: 0.5s ease;
+}
+
+.servicesQestionList li img:hover {
+  opacity: 1;
+}
+
+/*Навигация по странице*/
+.servicesNavigation {
+  position: relative;
+  left: 12%;
+  margin-bottom: 150px;
+}
+.servicesNavigationTitle {
+  font-size: 1.5em;
+  color: grey;
+}
+.servicesNavigationList li {
+  margin: 15px;
+}
+.servicesNavigationList li::marker {
+  color: gold;
+}
+.servicesNavigationList li a:hover {
+  color: gold;
+}
